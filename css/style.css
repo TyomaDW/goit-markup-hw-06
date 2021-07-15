@@ -876,19 +876,15 @@ textarea::placeholder {
 }
 .checkbox-hidden:checked + .checkbox-custom {
   background-color: var(--accent-color);
-  border: none;
-  fill: var(--primary-white-color);
+  background-size: contain;
+  background-origin: border-box;
+  background-image: url('../images/icon-check.svg');
 }
 
 .checkbox-hidden:focus + .checkbox-custom {
-  outline: var(--accent-color) solid 1px;
+  border-color: var(--accent-color);
 }
 
-.checkbox-hidden:checked + .checkbox-custom .checked {
-  background-size: contain;
-  background-origin: border-box;
-  visibility: visible;
-}
 .form-alignment .button {
   padding-left: 56px;
   padding-right: 56px;
