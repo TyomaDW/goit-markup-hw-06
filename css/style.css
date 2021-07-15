@@ -881,7 +881,7 @@ textarea::placeholder {
 }
 
 .checkbox-hidden:focus + .checkbox-custom {
-  border-color: var(--accent-color) solid 1px;
+  border: var(--accent-color) solid 1px;
 }
 
 .checkbox-hidden:checked + .checkbox-custom .checked {
