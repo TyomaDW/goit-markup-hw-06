@@ -770,13 +770,14 @@ body {
 .modal {
   position: absolute;
   width: 528px;
-  height: 581px;
+  height: 570px;
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   top: 50%;
   left: 50%;
+  padding: 40px;
   transform: translate(-50%, -50%) scale(1);
 
   transition: transform 500ms var(--timing-function), visibility 500ms var(--timing-function);
@@ -787,6 +788,9 @@ body {
 }
 
 .close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   background-color: transparent;
   height: 30px;
@@ -808,9 +812,6 @@ body {
 }
 
 .form-alignment {
-  width: 448px;
-  padding: 40px 0;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -863,7 +864,8 @@ textarea::placeholder {
   width: 16px;
   height: 15px;
   border: 2px solid var(--titles-color);
-  border-radius: 4px;
+  border-radius: 2px;
+  fill: none;
   margin-right: 8px;
 }
 .checked {
@@ -871,10 +873,17 @@ textarea::placeholder {
 }
 .checkbox-hidden:checked + .checkbox-custom {
   background-color: var(--accent-color);
-  border: 0;
-  background-origin: border-box;
+  border: none;
+  fill: var(--primary-white-color);
 }
+
+.checkbox-hidden:focus + .checkbox-custom {
+  outline: var(--accent-color) solid 1px;
+}
+
 .checkbox-hidden:checked + .checkbox-custom .checked {
+  background-size: contain;
+  background-origin: border-box;
   visibility: visible;
 }
 .form-alignment .button {
