@@ -871,10 +871,9 @@ textarea::placeholder {
   transition: fill 250ms var(--timing-function), background-color 250ms var(--timing-function),
     border 250ms var(--timing-function);
 }
-.checked {
-  visibility: hidden;
-}
+
 .checkbox-hidden:checked + .checkbox-custom {
+  border-color: var(--accent-color);
   background-color: var(--accent-color);
   background-size: contain;
   background-origin: border-box;
