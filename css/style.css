@@ -867,6 +867,9 @@ textarea::placeholder {
   border-radius: 2px;
   fill: none;
   margin-right: 8px;
+
+  transition: fill 250ms var(--timing-function), background-color 250ms var(--timing-function),
+    border 250ms var(--timing-function);
 }
 .checked {
   visibility: hidden;
